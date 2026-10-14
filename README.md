@@ -91,3 +91,23 @@ O que o time de dados sabe e te conta:
 - A ferramenta de CRM e o sistema de pedidos são sistemas diferentes e não compartilham configuração.
 - Os dados foram extraídos em 01/10/2026.
 
+
+## Registro do processo (obrigatório)
+
+**Commits e pushes.** Trabalhe na branch `entrega` e faça push ao fim de cada sessão de trabalho. O GitHub registra a hora de cada push no servidor. Ao terminar, abra um Pull Request de `entrega` para `main`: a abertura do PR marca a entrega.
+
+**Uso de IA em `AI_LOG.md`.**
+- Se usar um agente que lê `AGENTS.md` ou `CLAUDE.md` (Claude Code, Cursor, Codex, Copilot e similares), ele registra cada sessão automaticamente. Confira o que foi escrito.
+- Se usar IA em chat (ChatGPT, Claude.ai, Gemini etc.), ao fim de cada conversa cole o prompt abaixo e acrescente a resposta ao final de `AI_LOG.md`:
+
+```
+Resuma esta conversa para um registro de uso de IA, em português, neste formato:
+### <data e hora> · <ferramenta e modelo>
+- **Pedido:** o que eu pedi, em 1 a 3 linhas.
+- **O que a IA fez ou sugeriu:** resumo factual.
+- **O que eu conferi, corrigi ou rejeitei:** inclusive erros seus que eu apontei.
+- **Arquivos criados ou alterados:** caminhos, se houver.
+Seja factual. Não invente nada que não esteja na conversa.
+```
+
+Links de compartilhamento ou exportações das conversas (por exemplo, `/export` no Claude Code) são bem-vindos em `ai-log/`.
