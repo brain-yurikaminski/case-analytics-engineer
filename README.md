@@ -39,6 +39,8 @@ Tempo de trabalho: **4 horas**.
 1. O que aconteceu com os resgates depois do Pix e o que isso significa para as metas e para o programa.
 2. Avalie as três afirmações.
 3. Uma recomendação de uma página para a diretoria.
+4. **Dashboard estratégico.** A diretoria vai acompanhar as principais métricas do programa por um dashboard. Monte o dashboard e a estrutura de dados por trás dele para responder às principais perguntas de negócio da diretoria. Os mesmos dados também serão consumidos por um agente de IA: desenhe uma estrutura que atenda aos dois (dashboard e agente) e justifique suas escolhas (camadas, grão, métricas, nomes, documentação, como o agente descobre o que cada campo significa).
+5. **Opcional, se sobrar tempo:** desenvolva o agente que responde perguntas da diretoria sobre esses dados. Veja *Chave de LLM para o agente* abaixo.
 
 **Regras da entrega**
 
@@ -50,11 +52,21 @@ Tempo de trabalho: **4 horas**.
 
 ## O que entregar
 
-Três peças em formato zip ou em um git.
+Quatro peças em formato zip ou em um git (cinco, se fizer o agente).
 
 1. **Apresentação para a diretoria.** Mostra o que aconteceu, avalia as três afirmações e termina com a sua recomendação. Cada ponto da recomendação precisa trazer o número que o sustenta e dizer o que ainda falta saber. A apresentação será usada na devolutiva.
 2. **Código e testes.** Todos os números da apresentação saem daqui, com SQL e/ou Python (dbt é opcional).
 3. **README.** Precisa permitir que um avaliador reconstrua tudo a partir dos CSVs, sem editar nada à mão. Nele também ficam o que você entendeu dos dados, como modelou, as hipóteses que assumiu, o que perguntaria ao negócio ou aos donos dos sistemas e um registro breve do uso de IA (o que você pediu e o que conferiu ou corrigiu, subagentes e/ou skills que utilizou).
+4. **Dashboard e estrutura de dados.** O dashboard (link acessível aos avaliadores, arquivo ou instruções para subir localmente), os modelos que o alimentam e a justificativa da estrutura para dashboard e agente. Ferramenta livre.
+5. **Agente (opcional).** Código, instruções para rodar e exemplos de perguntas e respostas, incluindo pelo menos uma pergunta que ele deveria se recusar a responder ou responder com ressalva.
+
+## Chave de LLM para o agente
+
+Você não precisa gastar dinheiro com o agente.
+
+- Use a camada gratuita da API do Gemini: crie uma chave em https://aistudio.google.com/apikey com qualquer conta Google. Ela basta para o volume deste case. Alternativa sem chave: um modelo local (Ollama ou similar).
+- Se a cota gratuita não bastar, peça ao recrutador uma chave temporária. Ela é pessoal, tem limite de uso e será revogada após o prazo.
+- Guarde a chave em `.env` (já está no `.gitignore`) e documente o nome da variável no README. **Nunca faça commit de chave.**
 
 ## Como enviar
 
