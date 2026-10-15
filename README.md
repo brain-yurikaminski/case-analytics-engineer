@@ -64,9 +64,12 @@ Quatro peças em formato zip ou em um git (cinco, se fizer o agente).
 
 Você não precisa gastar dinheiro com o agente.
 
-- Use a camada gratuita da API do Gemini: crie uma chave em https://aistudio.google.com/apikey com qualquer conta Google. Ela basta para o volume deste case. Alternativa sem chave: um modelo local (Ollama ou similar).
-- Se a cota gratuita não bastar, peça ao recrutador uma chave temporária. Ela é pessoal, tem limite de uso e será revogada após o prazo.
-- Guarde a chave em `.env` (já está no `.gitignore`) e documente o nome da variável no README. **Nunca faça commit de chave.**
+- Durante o desenvolvimento, use a chave e o provedor que preferir. Sugestão: a camada gratuita da API do Gemini, com chave criada em https://aistudio.google.com/apikey usando qualquer conta Google. Ela basta para o volume deste case. Outros provedores com cota gratuita ou um modelo local (Ollama ou similar) também servem.
+- **Na avaliação, vamos publicar o seu projeto em produção (por exemplo, no Vercel) e rodar o agente com a nossa chave do Gemini.** Por isso:
+  - o agente precisa funcionar com o Gemini, mesmo que você tenha desenvolvido com outro provedor;
+  - a chave deve ser lida de variável de ambiente, e o nome dela deve estar documentado no README;
+  - o README deve trazer um único comando ou passo a passo curto para subir o dashboard e o agente.
+- Guarde a chave em `.env` (já está no `.gitignore`). **Nunca faça commit de chave.**
 
 ## Como enviar
 
