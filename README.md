@@ -54,11 +54,28 @@ Tempo de trabalho: **4 horas**.
 
 Quatro peças em formato zip ou em um git (cinco, se fizer o agente).
 
-1. **Apresentação para a diretoria.** Mostra o que aconteceu, avalia as três afirmações e termina com a sua recomendação. Cada ponto da recomendação precisa trazer o número que o sustenta e dizer o que ainda falta saber. A apresentação será usada na devolutiva.
+1. **Apresentação para a diretoria.** Mostra o que aconteceu, avalia as três afirmações e termina com a sua recomendação. Cada ponto da recomendação precisa trazer o número que o sustenta e dizer o que ainda falta saber. A apresentação será usada na devolutiva. Em HTML, partindo do modelo em `apresentacao-modelo/` (veja *Contrato de entrega*).
 2. **Código e testes.** Todos os números da apresentação saem daqui, com SQL e/ou Python (dbt é opcional).
 3. **README.** Precisa permitir que um avaliador reconstrua tudo a partir dos CSVs, sem editar nada à mão. Nele também ficam o que você entendeu dos dados, como modelou, as hipóteses que assumiu, o que perguntaria ao negócio ou aos donos dos sistemas e um registro breve do uso de IA (o que você pediu e o que conferiu ou corrigiu, subagentes e/ou skills que utilizou).
 4. **Dashboard e estrutura de dados.** O dashboard (link acessível aos avaliadores, arquivo ou instruções para subir localmente), os modelos que o alimentam e a justificativa da estrutura para dashboard e agente. Ferramenta livre.
 5. **Agente (opcional).** Código, instruções para rodar e exemplos de perguntas e respostas, incluindo pelo menos uma pergunta que ele deveria se recusar a responder ou responder com ressalva.
+
+## Contrato de entrega (estrutura obrigatória)
+
+Vamos abrir todas as entregas da mesma forma. Organize o repositório assim:
+
+```
+entrega/
+  apresentacao/index.html   # deck HTML, autocontido (img/ e lib/ ao lado)
+  dashboard/                # dashboard: build estático, arquivo ou app que sobe com o comando do README
+agente/                     # opcional; um único ponto de entrada documentado no README
+README.md
+AI_LOG.md
+```
+
+- **Apresentação.** Copie `apresentacao-modelo/` para `entrega/apresentacao/` e edite os slides. O guia visual da Brain está em `apresentacao-modelo/design-v3.md` (cores, tipografia, componentes) e `apresentacao-modelo/SLIDES.md` (componentes e templates de slide). O modelo traz exemplos ilustrativos: substitua todo o conteúdo pelo do case. Abra direto no navegador; `?static` na URL desliga a animação e serve para exportar PDF. Se preferir outra ferramenta, entregue também um PDF em `entrega/apresentacao/`.
+- **Dashboard.** Só dados agregados. Nada de dados linha a linha no build publicado.
+- **Agente.** Lê `GEMINI_API_KEY` (e opcionalmente `GEMINI_MODEL`) de variável de ambiente. A chave nunca vai para o navegador.
 
 ## Chave de LLM para o agente
 
