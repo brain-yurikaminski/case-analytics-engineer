@@ -32,15 +32,17 @@ Registre as hipóteses utilizadas e as perguntas que faria aos responsáveis pel
 
 ## O que pedimos
 
-Tempo de trabalho: **4 horas**. 
+Tempo de trabalho: **2 horas**. 
 
 **O que pedimos**
 
+A. **Apresentação Estratégica:** Monte uma apresentação para o board com a estrutura de apresentação executiva respondendo:
 1. O que aconteceu com os resgates depois do Pix e o que isso significa para as metas e para o programa.
 2. Avalie as três afirmações.
-3. Uma recomendação de uma página para a diretoria.
-4. **Dashboard estratégico.** A diretoria vai acompanhar as principais métricas do programa por um dashboard. Monte o dashboard e a estrutura de dados por trás dele para responder às principais perguntas de negócio da diretoria. Os mesmos dados também serão consumidos por um agente de IA: desenhe uma estrutura que atenda aos dois (dashboard e agente) e justifique suas escolhas (camadas, grão, métricas, nomes, documentação, como o agente descobre o que cada campo significa).
-5. **Opcional, se sobrar tempo:** desenvolva o agente que responde perguntas da diretoria sobre esses dados. Veja *Chave de LLM para o agente* abaixo.
+3. Uma recomendação de ações e próximos passos sugeridos para a diretoria.
+4. **Dashboard estratégico:** A diretoria vai acompanhar as principais métricas do programa por um dashboard. Monte o dashboard e a estrutura de dados por trás dele para responder às principais perguntas de negócio da diretoria. Os mesmos dados também serão consumidos por um agente de IA: desenhe uma estrutura que atenda aos dois (dashboard e agente) e justifique suas escolhas (camadas, grão, métricas, nomes, documentação, como o agente descobre o que cada campo significa).
+5. **Agente Analista:** Se ainda tiver tempo, desenvolva o agente que responde perguntas da diretoria sobre esses dados. Veja *Chave de LLM para o agente* abaixo.
+6. **Apresentação técnica:** Uma apresentação explicando rapidamente suas decisões técnicas sobre a organização dos dads, arquitetura do agente e do dashboard.
 
 **Regras da entrega**
 
